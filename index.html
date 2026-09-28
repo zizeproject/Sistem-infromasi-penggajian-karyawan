@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stradivarius Payroll</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <div class="brand-lockup">
+        <img class="brand-logo" src="logo.svg" alt="Logo Stradivarius">
+        <div>
+          <strong>Stradivarius</strong>
+          <span>People & Payroll</span>
+        </div>
+      </div>
+
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◌</span>Ringkasan</button>
+        <button class="nav-item" data-view="employees"><span class="nav-icon">○</span>Karyawan</button>
+        <button class="nav-item" data-view="payroll"><span class="nav-icon">◫</span>Payroll</button>
+        <button class="nav-item" data-view="attendance"><span class="nav-icon">◍</span>Absensi</button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span>Pengaturan</button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="status-dot"></div>
+        <div><strong>Periode aktif</strong><span>21 Agu - 20 Sep 2026</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="crumbs"><span>People & Payroll</span><b>/</b><strong id="page-title">Ringkasan</strong></div>
+        <div class="topbar-actions">
+          <button class="icon-button" title="Notifikasi">&#9678;<span class="notification-dot"></span></button>
+          <div class="profile"><div class="avatar">RC</div><div><strong>Rebbeca Celeste</strong><span>HR Manager</span></div><span class="chevron">&#8964;</span></div>
+        </div>
+      </header>
+
+      <section class="page-view active" id="view-overview">
+        <div class="hero-row">
+          <div class="hero-copy">
+            <p class="eyebrow">PAYROLL CONTROL CENTER</p>
+            <h1>Selamat pagi, Rebbeca.</h1>
+            <p class="muted">Pantau kesiapan payroll dan aktivitas tim dalam satu tempat.</p>
+          </div>
+          <div class="hero-visual"><img src="https://www.talenta.co/wp-content/uploads/2026/02/kv__hero-payroll-calculation-600x435.webp" alt="Perempuan duduk menggunakan laptop untuk mengelola payroll"><span class="hero-badge"><i></i>Payroll tersinkron</span></div>
+          <div class="hero-actions"><button class="button button-secondary" id="export-button">Unduh laporan</button><button class="button button-primary" id="run-payroll">Proses payroll <span>+</span></button></div>
+        </div>
+
+        <div class="period-strip"><div class="period-main"><span class="calendar-icon">&#9633;</span><div><span class="label">PERIODE PAYROLL AKTIF</span><strong>21 Agu - 20 Sep 2026</strong></div></div><div class="period-meta"><span class="pill pill-ready"><i></i>Siap diproses</span><span class="divider"></span><span>Bayar <strong>25 Sep 2026</strong></span></div></div>
+
+        <div class="metrics-grid">
+          <article class="metric-card"><div class="metric-head"><span>Total payroll</span><span class="metric-symbol pink">Rp</span></div><strong class="metric-value" id="total-payroll">Rp 86.420.000</strong><div class="metric-foot positive">&#8593; 4,8% <span>dari periode lalu</span></div></article>
+          <article class="metric-card"><div class="metric-head"><span>Karyawan aktif</span><span class="metric-symbol blue">#</span></div><strong class="metric-value" id="active-employees">24</strong><div class="metric-foot">22 tetap &bull; 2 freelance</div></article>
+          <article class="metric-card"><div class="metric-head"><span>Total potongan</span><span class="metric-symbol orange">-</span></div><strong class="metric-value">Rp 7.830.500</strong><div class="metric-foot negative">&#8595; 1,2% <span>dari periode lalu</span></div></article>
+          <article class="metric-card accent-card"><div class="metric-head"><span>Hari menuju bayar</span><span class="metric-symbol dark">&#9679;</span></div><strong class="metric-value">05 <small>hari</small></strong><div class="progress-line"><i></i></div><div class="metric-foot">Cut-off berakhir 20 Sep</div></article>
+        </div>
+
+        <div class="content-grid">
+          <section class="panel chart-panel"><div class="panel-heading"><div><h2>Ringkasan pengeluaran</h2><p>Perbandingan total payroll 6 periode terakhir</p></div><button class="select-button">6 bulan <span>&#8964;</span></button></div><div class="chart-wrap"><div class="y-axis"><span>100 jt</span><span>75 jt</span><span>50 jt</span><span>25 jt</span><span>0</span></div><div class="bar-chart"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><div class="bars"><div class="bar-col"><i style="height:52%"></i><span>Apr</span></div><div class="bar-col"><i style="height:61%"></i><span>Mei</span></div><div class="bar-col"><i style="height:57%"></i><span>Jun</span></div><div class="bar-col"><i style="height:72%"></i><span>Jul</span></div><div class="bar-col"><i style="height:78%"></i><span>Agu</span></div><div class="bar-col current"><i style="height:86%"></i><span>Sep</span></div></div></div></div><div class="chart-legend"><span><i class="legend-swatch salary"></i>Gaji & tunjangan</span><span><i class="legend-swatch incentive"></i>Insentif</span><strong>Rp 86,42 jt <small>periode ini</small></strong></div></section>
+          <section class="panel readiness-panel"><div class="panel-heading"><div><h2>Kesiapan payroll</h2><p>Status data periode berjalan</p></div><span class="completion">82%</span></div><div class="readiness-ring"><div><strong>82%</strong><span>lengkap</span></div></div><div class="readiness-list"><div><span class="check complete">&#10003;</span><span>Data karyawan</span><strong>24/24</strong></div><div><span class="check complete">&#10003;</span><span>Data absensi</span><strong>24/24</strong></div><div><span class="check pending">!</span><span>Insentif penjualan</span><strong>19/24</strong></div><div><span class="check pending">!</span><span>Validasi lembur</span><strong>3 data</strong></div></div><button class="text-button" data-view-target="attendance">Lihat detail kesiapan &#8594;</button></section>
+        </div>
+
+        <section class="panel table-panel"><div class="panel-heading table-heading"><div><h2>Payroll terbaru</h2><p>Transaksi terakhir yang tercatat</p></div><button class="text-button" data-view-target="payroll">Lihat semua &#8594;</button></div><div class="table-scroll"><table><thead><tr><th>Karyawan</th><th>Jabatan</th><th>Periode</th><th>Take home pay</th><th>Status</th><th></th></tr></thead><tbody id="recent-payroll"><tr><td><div class="person-cell"><div class="avatar avatar-sm pink-bg">NP</div><span><strong>Nadia Putri</strong><small>ST-00124</small></span></div></td><td>Store Manager</td><td>21 Agu - 20 Sep</td><td><strong>Rp 8.450.000</strong></td><td><span class="status-badge paid">Dibayar</span></td><td><button class="more-button">&#8943;</button></td></tr><tr><td><div class="person-cell"><div class="avatar avatar-sm blue-bg">RF</div><span><strong>Raka Fadhil</strong><small>ST-00131</small></span></div></td><td>Sales Associate</td><td>21 Agu - 20 Sep</td><td><strong>Rp 4.720.500</strong></td><td><span class="status-badge review">Review</span></td><td><button class="more-button">&#8943;</button></td></tr><tr><td><div class="person-cell"><div class="avatar avatar-sm green-bg">SA</div><span><strong>Salsa Anindya</strong><small>ST-00137</small></span></div></td><td>Visual Merchandiser</td><td>21 Agu - 20 Sep</td><td><strong>Rp 5.180.000</strong></td><td><span class="status-badge paid">Dibayar</span></td><td><button class="more-button">&#8943;</button></td></tr></tbody></table></div></section>
+      </section>
+
+      <section class="page-view" id="view-employees"><div class="section-header"><div><p class="eyebrow">MASTER DATA</p><h1>Daftar karyawan</h1><p class="muted">Kelola data karyawan aktif Stradivarius.</p></div><button class="button button-primary" id="add-employee">Tambah karyawan <span>+</span></button></div><div class="toolbar"><div class="search-box"><span>&#9906;</span><input id="employee-search" placeholder="Cari nama atau NIK..."></div><button class="filter-button">Semua status <span>&#8964;</span></button></div><section class="panel table-panel"><div class="table-scroll"><table><thead><tr><th>Karyawan</th><th>Jabatan</th><th>Status kerja</th><th>PTKP</th><th>Gaji pokok</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="employee-list"></tbody></table></div></section></section>
+
+      <section class="page-view" id="view-payroll"><div class="section-header"><div><p class="eyebrow">PAYROLL</p><h1>Proses penggajian</h1><p class="muted">Periode 21 Agu - 20 Sep 2026 &bull; pembayaran 25 Sep 2026</p></div><button class="button button-primary" id="generate-payroll">Isi payroll <span>+</span></button></div><div class="payroll-summary"><div class="summary-box"><span>Gross payroll</span><strong>Rp 94.250.500</strong></div><div class="summary-box"><span>Total potongan</span><strong>Rp 7.830.500</strong></div><div class="summary-box dark-summary"><span>Net payroll</span><strong>Rp 86.420.000</strong></div></div><section class="panel table-panel"><div class="panel-heading table-heading"><div><h2>Rincian payroll karyawan</h2><p>Gaji pokok, insentif, lembur, dan potongan</p></div><span class="pill pill-ready"><i></i>Siap diproses</span></div><div class="table-scroll"><table><thead><tr><th>Karyawan</th><th>Gaji pokok</th><th>Insentif</th><th>Lembur</th><th>Potongan</th><th>Take home pay</th><th>Aksi</th></tr></thead><tbody id="payroll-list"></tbody></table></div></section></section>
+
+      <section class="page-view" id="view-attendance"><div class="section-header"><div><p class="eyebrow">ABSENSI & CUT-OFF</p><h1>Validasi absensi</h1><p class="muted">Data fingerprint diimpor untuk periode 21 Agu - 20 Sep 2026.</p></div><button class="button button-secondary" id="import-attendance">Impor CSV Excel</button><input id="attendance-file" type="file" accept=".csv,.txt" hidden></div><div class="metrics-grid compact"><article class="metric-card"><div class="metric-head"><span>Total hari kerja</span><span class="metric-symbol blue">#</span></div><strong class="metric-value">26</strong><div class="metric-foot">Jadwal operasional</div></article><article class="metric-card"><div class="metric-head"><span>Absensi lengkap</span><span class="metric-symbol green">&#10003;</span></div><strong class="metric-value">19 <small>/ 24</small></strong><div class="metric-foot positive">79% sudah tervalidasi</div></article><article class="metric-card"><div class="metric-head"><span>Perlu perhatian</span><span class="metric-symbol orange">!</span></div><strong class="metric-value">5</strong><div class="metric-foot negative">3 lembur &bull; 2 izin</div></article></div><section class="panel info-panel"><div class="info-icon">i</div><div><h2>Aturan periode aktif</h2><p>Hari kerja kantor mengikuti Senin-Jumat, sedangkan toko mengikuti jadwal shift 6 hari. Cuti dan sakit dengan surat dokter dibayar penuh. Izin biasa dan mangkir akan memengaruhi prorata.</p></div></section></section>
+
+      <section class="page-view" id="view-settings"><div class="section-header"><div><p class="eyebrow">KONFIGURASI</p><h1>Pengaturan payroll</h1><p class="muted">Aturan dasar yang digunakan sistem Stradivarius.</p></div></div><div class="settings-grid"><section class="panel settings-panel"><h2>Periode & lembur</h2><label>Cut-off payroll<input value="Tanggal 21 - 20" readonly></label><label>Tanggal pembayaran<input value="Tanggal 25" readonly></label><label>Rumus lembur<input value="1/173 x upah sebulan" readonly></label></section><section class="panel settings-panel"><h2>Potongan BPJS</h2><label>BPJS Kesehatan<input value="1% karyawan / 4% perusahaan" readonly></label><label>JHT<input value="2% karyawan / 3,7% perusahaan" readonly></label><label>JP<input value="1% karyawan / 2% perusahaan" readonly></label></section></div></section>
+    </main>
+  </div>
+  <dialog class="employee-dialog" id="employee-dialog">
+    <form id="employee-form" method="dialog">
+      <div class="dialog-header"><div><p class="eyebrow">MASTER DATA</p><h2 id="employee-dialog-title">Tambah karyawan</h2></div><button class="close-button" type="button" id="close-dialog" aria-label="Tutup">&times;</button></div>
+      <input type="hidden" name="edit_id" id="employee-edit-id">
+      <div class="form-grid">
+        <label>Kode karyawan<input name="employee_code" required placeholder="ST-00160"></label>
+        <label>Nama lengkap<input name="name" required placeholder="Nama karyawan"></label>
+        <label>Jabatan<input name="position" required placeholder="Sales Associate"></label>
+        <label>Status kerja<select name="employment_status"><option>Tetap</option><option>Kontrak</option><option>Freelance</option></select></label>
+        <label>Lokasi kerja<select name="workplace_type"><option>Toko</option><option>Kantor</option></select></label>
+        <label>Status PTKP<select name="tax_status"><option>TK/0</option><option>TK/1</option><option>K/0</option><option>K/1</option><option>K/2</option><option>K/3</option></select></label>
+        <label>Tanggal mulai<input name="start_date" type="date" required></label>
+        <label>Gaji pokok<input name="basic_salary" type="number" min="0" value="0" required></label>
+      </div>
+      <div class="dialog-actions"><button class="button button-secondary" type="button" id="cancel-dialog">Batal</button><button class="button button-primary" type="submit">Simpan karyawan</button></div>
+    </form>
+  </dialog>
+  <dialog class="employee-dialog payroll-dialog" id="payroll-dialog">
+    <form id="payroll-form" method="dialog">
+      <div class="dialog-header"><div><p class="eyebrow">PERIODE 21 AGU - 20 SEP 2026</p><h2>Input payroll</h2></div><button class="close-button" type="button" id="close-payroll-dialog" aria-label="Tutup">&times;</button></div>
+      <div class="form-grid">
+        <label>Karyawan<select name="employee_id" id="payroll-employee" required></select></label>
+        <label>Hari kerja terjadwal<input name="scheduled_days" type="number" min="1" value="26" required></label>
+        <label>Hari dibayar<input name="payable_days" type="number" min="0" value="26" required></label>
+        <label>Gaji pokok<input name="basic_salary" id="payroll-basic-salary" type="number" min="0" value="0" required></label>
+        <label>Tunjangan tetap<input name="fixed_allowance" type="number" min="0" value="0"></label>
+        <label>Tunjangan tidak tetap<input name="variable_allowance" type="number" min="0" value="0"></label>
+        <label>Insentif individu<input name="individual_incentive" type="number" min="0" value="0"></label>
+        <label>Insentif toko<input name="store_incentive" type="number" min="0" value="0"></label>
+        <label>Jam lembur<input name="overtime_hours" type="number" min="0" step="0.5" value="0"></label>
+        <label>PPh 21<input name="pph21" type="number" min="0" value="0"></label>
+        <label>BPJS Kesehatan<input name="bpjs_health" type="number" min="0" value="0"></label>
+        <label>BPJS TK<input name="bpjs_tk" type="number" min="0" value="0"></label>
+        <label>Denda keterlambatan<input name="late_penalty" type="number" min="0" value="0"></label>
+        <label>Potongan mangkir/izin<input name="absence_deduction" type="number" min="0" value="0"></label>
+      </div>
+      <div class="payroll-total"><span>Perkiraan take home pay</span><strong id="payroll-preview">Rp 0</strong></div>
+      <div class="dialog-actions"><button class="button button-secondary" type="button" id="cancel-payroll-dialog">Batal</button><button class="button button-primary" type="submit">Simpan payroll</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
